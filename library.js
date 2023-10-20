@@ -21,10 +21,10 @@ const REGEX = XRegExp(`(?:^|\\s|\\>|;)(\\${SYMBOL}[\\p{L}\\d\\-_.]+)`, 'g');
 const isLatinMention = /@[\w\d\-_.]+$/;
 
 plugin.init = async (params) => {
-	const { router, middleware } = params;
+	const { router } = params;
 	const routeHelpers = require.main.require('./src/routes/helpers');
 
-	routeHelpers.setupAdminPageRoute(router, '/admin/plugins/image-mentions', middleware, [], controllers.renderAdminPage);
+	routeHelpers.setupAdminPageRoute(router, '/admin/plugins/image-mentions', controllers.renderAdminPage);
 };
 
 plugin.addAdminNavigation = function (header, callback) {
