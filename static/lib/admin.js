@@ -1,11 +1,9 @@
 'use strict';
 
-/* globals $, app, define */
-
 define('admin/plugins/image-mentions', ['settings'], function (settings) {
 	const PLUGIN_HASH = 'image-mentions';
 
-	var ACP = {};
+	const ACP = {};
 	let $mentionListCon;
 	let $pair;
 	let $pairInputs;
